@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        header {
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/528/832/small/vintage-camera-covered-in-moss-and-flowers-in-a-forest-photo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            display: flex;
+        }
+        nav > a {
+            font-family: "Roboto Slab", serif;
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+            width: calc(100% * 1/7);
+            text-decoration: none;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            font-size: 5rem;
+            text-align: left;
+            font-family: "Roboto Slab", serif;
+            width: 80%;
+        }
+        main {
+            width: calc(100% * 5/6);
+            margin: auto;
+            padding-block: 45px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+        }
+        section {
+            border: 2px blue solid;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: "Roboto Slab", serif;
+        }
+        .img-grid > div > img {
+            width: 100%;
+        }
+        .img-grid > div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-grid > div > p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 0:<br>Becoming Friends with Your Camera</h1>
+        <p style="color:white; font-size:2rem;">EricNguyen1213.github.io/0/</p>
+    </header>
+    <nav>
+        <a href="../../index.html" style="border-left: 0px">
+            <h3>Home</h3>
+        </a>
+        <a href="../../0/index.html">
+            <h3>Project 0</h3>
+        </a>
+        <a href="../../1/index.html">
+            <h3>Project 1</h3>
+        </a>
+        <a href="../../2/index.html">
+            <h3>Project 2</h3>
+        </a>
+        <a href="../../3/index.html">
+            <h3>Project 3</h3>
+        </a>
+        <a href="../../4/index.html">
+            <h3>Project 4</h3>
+        </a>
+        <a href="../../5/index.html">
+            <h3>Final Project</h3>
+        </a>
+    </nav>
+    <main>
+        <section>
+            <h2>Part 1: Selfie</h2>
+            <div class="img-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                <div style="padding-inline: 20px;">
+                    <p>Close Up</p>
+                </div>
+                <div>
+                    <img src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+                </div>
+                <div>
+                    <img src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+                </div>
+                <div style="padding-inline: 20px;">
+                    <p>Several feet from your subject, Zoom in</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Part 2: Architectural Perspective Compression</h2>
+            <div class="img-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                <div style="padding-inline: 20px;">
+                    <p>Zoom in, and take a photo</p>
+                </div>
+                <div>
+                    <img src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+                </div>
+                <div>
+                    <img src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+                </div>
+                <div style="padding-inline: 20px;">
+                    <p>Walk toward the building, and take a second photo, now without zoom</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Part 3: The Dolly Zoom</h2>
+            <div class="img-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                <div>
+                    <p>Now take a few (4-8 or even more!) still photos while you move the camera back and zoom in, keeping the resulting image roughly the same size</p>
+                </div>
+                <div>
+                    <img src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
