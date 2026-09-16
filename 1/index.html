@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EricNguyen1213.github.io/1/</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;            
+        }
+        body {
+            background-image: url('https://images.unsplash.com/photo-1707209856575-a80b9dff5524?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2hpdGUlMjBncmFkaWVudHxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: 100% 100%;
+        }
+        header {
+            background-image: url("https://andersonarchival.com/wp-content/uploads/2020/07/Personal-Collections-Photographs-1030x684.jpg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            display: flex;
+        }
+        nav > a {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+            width: calc(100% * 1/7);
+            text-decoration: none;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            font-size: 4rem;
+            text-align: left;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 66%;
+        }
+        main {
+            width: calc(100% * 3/4);
+            margin: auto;
+            padding-block: 75px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            padding-bottom: 200px;
+        }
+        section {
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            
+        }
+        .img_contain {
+            text-align: center;
+        }
+        .img_contain > img {
+            max-width: 100%;   
+            max-height: 100%;  
+            height: auto;       
+            width: auto;
+            object-fit: contain;
+
+        }
+        .img_contain > p {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            text-align: left; 
+            width: 80%;
+            margin: auto;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1:<br>Images of the Russian Empire -- <br>Colorizing the Prokudin-Gorskii Photo Collection</h1>
+    </header>
+    <nav>
+        <a href="../index.html" style="border-left: 0px">
+            <h3>Home</h3>
+        </a>
+        <a href="../0/index.html">
+            <h3>Project 0</h3>
+        </a>
+        <a href="../1/index.html">
+            <h3>Project 1</h3>
+        </a>
+        <a href="../2/index.html">
+            <h3>Project 2</h3>
+        </a>
+        <a href="../3/index.html">
+            <h3>Project 3</h3>
+        </a>
+        <a href="../4/index.html">
+            <h3>Project 4</h3>
+        </a>
+        <a href="../5/index.html">
+            <h3>Final Project</h3>
+        </a>
+    </nav>
+    <main>
+        <section>
+            <h2>Single-Scale Alignment (using NCC/L2 Norm Metrics):</h2>
+            <hr style="background-color: black; height: 2px">
+            <h3>Results:</h3>
+            <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                <div class="img_contain">
+                    <h4>Cathedral</h4>
+                    <img src="./media/single-scale/L2_Norm_Cathedral.png" >
+                    <p>
+                        Red Offset: (12, 3) 
+                        <br>Red L2 Norm Score: 70.66315
+                        <br>Red NCC Score: 0.8207504
+                        <br>Green Offset: (5, 2) 
+                        <br>Green L2 Norm Score: 48.912315
+                        <br>Green NCC Score: 0.9197568
+                    </p>
+                    
+                </div>
+                <div class="img_contain">
+                    <h4>Monastery</h4>
+                    <img src="./media/single-scale/L2_Norm_Monastery.png" >
+                    <p>
+                        Red Offset: (3, 2)
+                        <br>Red L2 Norm Score: (3, 2)
+                        <br>Red NCC Score: 0.73663944
+                        <br>Green Offset: (-3, 2) 
+                        <br>Green L2 Norm Score: 34.743427
+                        <br>Green NCC Score: 0.91387904
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Tobolsk</h4>
+                    <img src="./media/single-scale/L2_Norm_Tobolsk.png" >
+                    <p>
+                        Red Offset: (6, 3)
+                        <br>Red L2 Norm Score: 68.49037
+                        <br>Red NCC Score: 0.81224376
+                        <br>Green Offset: (3, 3)
+                        <br>Green L2 Norm Score: 42.065212
+                        <br>Green NCC Score: 0.8904067
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div style="width: 95%; margin: auto;">
+                <p class="text">
+                    Upon seeing the images, the task was apparent. It was a matter of aligning the 
+                    individually-exposed-RGB photographs together to create a single colored image, 
+                    but the steps to do so was anything but simple. To determine a "good alignment," 
+                    we used both euclidean distance and normalized cross-correlation as possible scoring
+                    functions for the images' alignments. With euclidean distance, when two images match, 
+                    the individual pixels' intensities would be assumed to be closest to each other, so 
+                    when subtracted, they should produce the least error. Squaring and summing it all up 
+                    ensures that dynamic is applicable to all the pixels as well, meaning all pixels in the 
+                    images aligns with their closest. Normalized cross-correlation takes it a step further,
+                    accounting for overall differences in photo quality due to lighting difference by normalizing 
+                    each pixel before measuring their similarity with their aligned counterpart. The closest the 
+                    resulting value is to 1 or -1 means it is the closest to a match or inverse match. To keep things simple, I turned NCC's value negative, so I could treat it like Euclidean distance's score, 
+                    in that I needed to find the minimum to find the best corresponding offset.
+
+                    <br>
+                    <br>
+                    First, I cropped the borders of all images by a preset fraction to remove any possible
+                    interference to the scoring calculation. Then I started the naive implementation of the offset finder that did not account
+                    for image resolution. Given a preset max offset, for me 15, I rolled the red image for all possible 
+                    x and y offset combination within [-15, 15] and compared it to the blue image one by one using one of the 
+                    scoring functions. I did the same with the green image. It worked for all the smaller images.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Multi-Scale Pyramid Alignment (using NCC/L2 Norm Metrics):</h2>
+            <hr style="background-color: black; height: 2px">
+            <h3>Results:</h3>
+            <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                <div class="img_contain">
+                    <h4>Church</h4>
+                    <img src="./media/multi-scale/L2_Church.png" >
+                    <p>
+                        Red Offset: (58, -4) 
+                        <br>Green Offset: (25, 4)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Emir</h4>
+                    <img src="./media/multi-scale/L2_Emir.png" >
+                    <p>
+                        Red Offset: (103, 55) 
+                        <br>Green Offset: (49, 24)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Harvesters</h4>
+                    <img src="./media/multi-scale/L2_Harvesters.png" >
+                    <p>
+                        Red Offset: (124, 13) 
+                        <br>Green Offset: (59, 16)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Icon</h4>
+                    <img src="./media/multi-scale/L2_Icon.png" >
+                    <p>
+                        Red Offset: (89, 23) 
+                        <br>Green Offset: (40, 17)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Ilemselga</h4>
+                    <img src="./media/multi-scale/L2_Ilemselga.png" >
+                    <p>
+                        Red Offset: (130, 11) 
+                        <br>Green Offset: (40, 7)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Melons</h4>
+                    <img src="./media/multi-scale/L2_Melons.png" >
+                    <p>
+                        Red Offset: (179, 13) 
+                        <br>Green Offset: (82, 10)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Religious Paintings</h4>
+                    <img src="./media/multi-scale/L2_rel_painting.png" >
+                    <p>
+                        Red Offset: (68, 7) 
+                        <br>Green Offset: (28, 3)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Self Portrait</h4>
+                    <img src="./media/multi-scale/L2_self_portrait.png" >
+                    <p>
+                        Red Offset: (176, 37) 
+                        <br>Green Offset: (78, 29)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Siren</h4>
+                    <img src="./media/multi-scale/L2_siren.png" >
+                    <p>
+                        Red Offset: (95, -25) 
+                        <br>Green Offset: (49, -6)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Three Generations</h4>
+                    <img src="./media/multi-scale/L2_three_gen.png" >
+                    <p>
+                        Red Offset: (112, 11) 
+                        <br>Green Offset: (53, 14)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Wharf</h4>
+                    <img src="./media/multi-scale/L2_wharf.png" >
+                    <p>
+                        Red Offset: (83, -16) 
+                        <br>Green Offset: (15, -7)
+                    </p>
+                </div>
+            </div>
+            <br>
+            <h3>My Chosen Picks:</h3>
+            <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                <div class="img_contain">
+                    <h4>Boy Looking Out</h4>
+                    <img src="./media/multi-scale/L2_boy.png" >
+                    <p>
+                        Red Offset: (102, -10) 
+                        <br>Green Offset: (40, -12)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Village By The River</h4>
+                    <img src="./media/multi-scale/L2_village.png" >
+                    <p>
+                        Red Offset: (101, -10) 
+                        <br>Green Offset: (25, -4)
+                    </p>
+                </div>
+                <div class="img_contain">
+                    <h4>Lugano</h4>
+                    <img src="./media/multi-scale/L2_lugano.png" >
+                    <p>
+                        Red Offset: (120, 32) 
+                        <br>Green Offset: (55, 8)
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h3>The Algorithm:</h3>
+            <div style="width: 95%; margin: auto;">
+                <p class="text">
+                    The biggest issue with the naive offset finder implementation is that it cannot properly handle big data types
+                    like the .tif. With resolutions of that sizes, a bigger range of offsets would need to be searched through and that 
+                    would just take more time.
+                    <br>
+                    <br>
+                    The solution to this is to use image pyramids. By using lower resolution versions of the image, using the small search range that
+                    you would use for the naive offset finder implementation would actually cover a more significant amount of ground than with the
+                    bigger resolutions. Once you find the offsets that best fit for lower resolutions, you would go up a resolution and search the same range
+                    but now at the scaled up offsets you found from the previous layer. It essentially like repeatedly searching for the start point for better 
+                    finetuning in subsequent searches. 
+                    <br>
+                    <br>
+                    To create the image pyramid, you would do Gaussian filtering on the image via convolving over with a Gaussian kernel then
+                    subsample, taking every other row. This would cut the resolution by a factor of 2 and then you would rinse and repeat until
+                    you reach a layer where you deem the resolution small enough to be a decent stopping point. After the image pyramid is created for
+                    the R, G, and B parts, I would go down the layers from the top and conducting naive offset finder search on the current layers and passing 
+                    best fit offsets down to the next layer, scaling them up to be the starting point of the naive offset finder search again. Rinse and Repeat until
+                    I have reached the very bottom, in which the cummulative offsets I acquired is likely the right one for best fit alignment.
+                    <br>
+                    <br>
+                    Despite this optimization, I was still having trouble with the long search times, so I implemented another optimization to make my naive offset finder
+                    run faster. Instead of going one rolled image at a time, I made the scoring section apply to multiple rolled images in one iteration instead. By putting 
+                    my rolled images back to back, I can conduct matrix operations on them such that I would receive the scores of multiple rolled images at once instead of one
+                    at a time. This optimization significantly decreased the wait time per big image by a factor.
+                </p>
+            </div>
+        </section>
+       
+    </main>
+</body>
+</html>
