@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EricNguyen1213.github.io/2/</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;            
+        }
+        body {
+            background-image: url('https://img.magnific.com/premium-photo/dark-black-neutral-gray-gradient-grainy-background_1026065-2069.jpg');
+        }
+        header {
+            background-image: url("https://grapheine.com/wp-content/uploads/2020/05/hybrid-image-einstein-marilyn-2560x2227.webp");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            display: flex;
+        }
+        nav > a {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+            width: calc(100% * 1/7);
+            text-decoration: none;
+            text-align: center;
+        }
+        nav > a > h3 {
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: white;
+            font-size: 4rem;
+            text-align: left;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 66%;
+        }
+        main {
+            width: calc(100% * 4/5);
+            margin: auto;
+            padding-block: 75px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            padding-bottom: 200px;
+        }
+        section {
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            
+        }
+        .img_contain {
+            text-align: center;
+        }
+        .img_contain > img {
+            max-width: 100%;   
+            max-height: 100%;  
+            height: auto;       
+            width: auto;
+            object-fit: contain;
+
+        }
+        .img-grid > p, .img_contain > p {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            text-align: left; 
+            width: 80%;
+            margin: auto;
+        }
+        .img-grid > h4 {
+            text-align: center;
+            width: 100%;
+            margin-top: auto
+        }
+        .sub-header {
+            width: 99%; 
+            margin-inline: auto;
+            margin-bottom: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 2:<br>Fun with Filters and Frequencies!</h1>
+    </header>
+    <nav>
+        <a href="../index.html" style="border-left: 0px">
+            <h3>Home</h3>
+        </a>
+        <a href="../0/index.html">
+            <h3>Project 0</h3>
+        </a>
+        <a href="../1/index.html">
+            <h3>Project 1</h3>
+        </a>
+        <a href="../2/index.html">
+            <h3>Project 2</h3>
+        </a>
+        <a href="../3/index.html">
+            <h3>Project 3</h3>
+        </a>
+        <a href="../4/index.html">
+            <h3>Project 4</h3>
+        </a>
+        <a href="../5/index.html">
+            <h3>Final Project</h3>
+        </a>
+    </nav>
+    <main>
+        <section>
+            <h2>Fun with Filters:</h2>
+            <hr style="background-color: black; height: 2px">
+            <section>
+                <h3>Convolutions From Scratch!</h3>
+                <h4 class="sub-header">Zero Padding, Mode: Same</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>9x9 Box Filter</h4>
+                    <h4>Finite Difference Filter: Dx</h4>
+                    <h4>Finite Difference Filter: Dy</h4>
+                    <div class="img_contain">
+                        <img src="./media/1.1/same_Box Filter.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.1/same_X Filter.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.1/same_Y Filter.jpg" >
+                    </div>
+                    <p>
+                        4 For Loop Runtime: 1min 38s
+                        <br>2 For Loop Runtime: 1.05s
+                        <br>Scipy Runtime: 1.15s
+                    </p>
+                    <p>
+                        4 For Loop Runtime: 6.22s
+                        <br>2 For Loop Runtime: 99.4ms
+                        <br>Scipy Runtime: 45.8ms
+                    </p>
+                    <p>
+                        4 For Loop Runtime: 8.15s
+                        <br>2 For Loop Runtime: 59.4ms
+                        <br>Scipy Runtime: 80.1ms
+                    </p>
+                </div>
+                <h4 class="sub-header">Zero Padding, Mode: Full</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>9x9 Box Filter</h4>
+                    <h4>Finite Difference Filter: Dx</h4>
+                    <h4>Finite Difference Filter: Dy</h4>
+                    <div class="img_contain">
+                        <img src="./media/1.1/full_Box Filter.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.1/full_X Filter.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.1/full_Y Filter.jpg" >
+                    </div>
+                    <p>
+                        4 For Loop Runtime: 1min 33s
+                        <br>2 For Loop Runtime: 1.1s
+                        <br>Scipy Runtime: 928ms
+                    </p>
+                    <p>
+                        4 For Loop Runtime: 6.17s
+                        <br>2 For Loop Runtime: 130ms
+                        <br>Scipy Runtime: 70.2ms
+                    </p>
+                    <p>
+                        4 For Loop Runtime: 8.08s
+                        <br>2 For Loop Runtime: 63.8ms
+                        <br>Scipy Runtime: 73.9ms
+                    </p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="img_contain" style="margin:auto">
+                    <img style="width: 50%" src="./media/1.1/padding_imp.png" >
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        My implementation includes zero padding of a few modes: same & full. Same pads the
+                        input image just enough to leaves the output image the same dimensions as the original input
+                        image. It is still zero padding, so the there exist thin dark borders around the image due to
+                        contribution of 0 weights. Full pads the image to make the output image bigger after convolution
+                        to reveal the effects of every kernel filter interaction with the image. This along with zero padding
+                        made the dark boundaries thicker.
+                    </p>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px">
+                    <div class="img_contain" style="margin:auto">
+                        <img src="./media/1.1/slow_convolve.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.1/fast_convolve.png" >
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        My 4 for loop implementation iterated through every pixel of the output image. For each output pixel,
+                        it calculated its value by iterating through the filter operation pixel by pixel. Runtime for it was
+                        long, reaching nearly 2 minutes for applying the box filter.
+                        
+                        My 2 for loop implementation unrolled the pixel by pixel filter operation, doing the calculations for
+                        many output pixels at once instead of one at a time. The only iterating it needed to do was for the size
+                        of the kernel itself. Runtime for it was quick, making the box filter application around 1 second.
+                        
+                        In comparison to Scipy's convolution function, my 4 for loop implementation is miles behind in runtime but
+                        my 2 for loop implementation is very close, nearing the same runtime, and a few times has a smaller runtime like with the application 
+                        of the Dy finite difference filter.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h3>Finite Difference Operator</h3>
+                <h4 class="sub-header">Images of a Cameraman</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Partial Derivative in X</h4>
+                    <h4>Partial Derivative in Y</h4>
+                    <h4>Normalized Gradient Magnitude</h4>
+                    <div class="img_contain">
+                        <img src="./media/1.2/cameraman.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.2/pd_x.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.2/pd_y.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.2/normal_gm.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Binarized Edge Image</h4>
+                    <img style="width: 40%" src="./media/1.2/binary_gm.jpg" >
+                    <p style="text-align: center; font-size:1.25rem; margin-top: 10px;">
+                        <strong>Threshold:</strong> &nbsp; &nbsp; Gradient Magnitude < <strong>0.2828</strong>
+                    </p>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        My choice of threshold 0.2828 was motivated by my desire to balance noise and edges I thought were valuable.
+                        The biggest source of noise in the edge image originated in the grass, leaving lots of noise scattered along
+                        the bottom of the image. I slowly incremented up the threshold to gauge the reduction of noise. Past this threshold, 
+                        the details of the man and the camera's edges were getting reduced. While some noise is present, I believe its
+                        amount is low enough that it did not justify further reducing the details of the man and camera.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h3>Derivative of Gaussian (DoG) Filter</h3>
+                <h4 class="sub-header">Applied 5x5 Gaussian Filter First Then Partial Derivatives</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Smooth Gaussian Filtered </h4>
+                    <h4>Partial Derivative in X <br>of Smoothed Image</h4>
+                    <h4>Partial Derivative in Y <br>of Smoothed Image</h4>
+                    <h4>Normalized Gradient Magnitude <br>of Smoothed Image</h4>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smoothed.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_first_pd_x.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_first_pd_y.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_first_normal_gm.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Binarized Edge Image<br>of Smoothed Image</h4>
+                    <img style="width: 40%" src="./media/1.3/smooth_first_bin_gm.jpg" >
+                    <p style="text-align: center; font-size:1.25rem; margin-top: 10px;">
+                        <strong>Threshold:</strong> &nbsp; &nbsp; Gradient Magnitude < <strong>0.2828</strong>
+                    </p>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        There are a few differences to note. Compared to the white edges of the binarized unsmoothed
+                        gradient magnitude image, the white edges are far more smooth with less jaggness to them. The
+                        leftover noise on the bottom visible in the unsmoothed version is also no longer there any more.
+                    </p>
+                </div>
+                <h4 class="sub-header">Applied Partial Derivatives of Gaussian Filter (DoG)</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Partial Derivative in X <br>of Gaussian Filter (DoG x)</h4>
+                    <h4>Partial Derivative in Y <br>of Gaussian Filter (DoG y)</h4>
+                    <h4>Normalized Gradient Magnitude <br>from DoGs</h4>
+                    <h4>Binarized Edge Image<br>from DoGs' Gradient Magnitude</h4>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_pd_x.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_pd_y.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_normal_gm.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/1.3/smooth_bin_gm.jpg" >
+                        <p style="text-align: center; font-size:1.25rem; margin-top: 10px;">
+                            <strong>Threshold:</strong> &nbsp; &nbsp; gm < <strong>0.2828</strong>
+                        </p>
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Mathematically, applying the finite difference convolutions on gaussian filters before applying the results
+                        convolution over the image should be equivalent to previous process of smoothing the image first before finding
+                        the partial derivatives. You can see it. The results of applying DoGs is near identical to the results of the 
+                        smoothing process. The slight specks that appear are just a result of floating-point rounding errors, but asides
+                        from that, they are near identical.
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Fun with Frequencies:</h2>
+            <hr style="background-color: black; height: 2px">
+            <section>
+                <h3>Image "Sharpening"</h3>
+                <h4 class="sub-header">Taj Mahal</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Blurred</h4>
+                    <h4>High Frequencies <br>(Amplified for Visibility)</h4>
+                    <h4>Resharpened</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.1/taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/blurred_taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/high_freq_taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/resharp_taj.jpg" style="width:100%">
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Sharpened, a = 1</h4>
+                    <h4>Sharpened, a = 2</h4>
+                    <h4>Sharpened, a = 5</h4>
+                    <h4>Sharpened, a = 10</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_1_taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_2_taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_5_taj.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_10_taj.jpg" style="width:100%">
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        When an image is blurred via a Gaussian filter, the image is going through a filter
+                        such that only low frequencies are permitted while high frequencies are attentuated.
+                        An unsharp mask filter takes advantage of this. Since images after a blur filter
+                        are of low frequencies, taking the difference of it from the original would leave the
+                        high frequencies. These high freqeuncies are then added back to the original, sometimes
+                        scaled up, further amplifying the high frequencies in the original, making it "sharper".
+                        Sharpening is not always good, as doing it in an extreme degree could sharpen noise. 
+                        <br>
+                        <br>
+                        When resharpening an image that went through a blur filter, it creates an image that closely
+                        resembles the original.
+                    </p>
+                </div>
+                <br>
+                <h4 class="sub-header">Mama Duck</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Blurred</h4>
+                    <h4>High Frequencies <br>(Amplified for Visibility)</h4>
+                    <h4>Resharpened</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.1/ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/blurred_ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/high_freq_ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/resharp_ducky.jpg" style="width:100%">
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Sharpened, a = 1</h4>
+                    <h4>Sharpened, a = 2</h4>
+                    <h4>Sharpened, a = 5</h4>
+                    <h4>Sharpened, a = 10</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_1_ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_2_ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_5_ducky.jpg" style="width:100%">
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.1/sharpen_10_ducky.jpg" style="width:100%">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <br>
+                <h3>Hybrid Images</h3>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original: Derek</h4>
+                    <h4>Original: Nutmeg</h4>
+                    <h4>Hybrid: Derek + Nutmeg</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.2/orig_Derek.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/orig_Nutmeg.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/DerekNutmeg.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        Low Pass Filter:
+                        <br>Size: 85 x 85
+                        <br>Cutoff Value: 14
+                    </p>
+                    <p style="text-align: center">
+                        High Pass Filter:
+                        <br>Size: 19 x 19
+                        <br>Cutoff Value: 3
+                    </p>
+                    <p style="text-align: center">
+                        Low Freq. Weight: 0.5
+                        <br>High Freq. Weight: 1.5
+                    </p>
+                </div>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1.09fr) minmax(0, 1.1fr) minmax(0, 0.98fr); gap: 5px">
+                    <h4>Original: Zuzu</h4>
+                    <h4>Original: <br>1000 Yard Stare</h4>
+                    <h4>Hybrid: Zuzu + <br>1000 Yard Stare</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.2/orig_zuzu.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/orig_stare.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/ZuzuStare.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        Low Pass Filter:
+                        <br>Size: 49 x 49
+                        <br>Cutoff Value: 8
+                    </p>
+                    <p style="text-align: center">
+                        High Pass Filter:
+                        <br>Size: 19 x 19
+                        <br>Cutoff Value: 3
+                    </p>
+                    <p style="text-align: center">
+                        Low Freq. Weight: 0.8
+                        <br>High Freq. Weight: 1.2
+                    </p>
+                </div>
+                <h4 class="sub-header">The Process:</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original: Thinking Dude</h4>
+                    <h4>Original: Shrek</h4>
+                    <h4>Aligned Thinking Dude</h4>
+                    <h4>Aligned Shrek</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.2/dude.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/shrek.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/aligned_dude.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/aligned_shrek.jpg" >
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        When attempting to create hybrid images, it is best that the images are
+                        aligned for a better viewing experience. To do so, I chose specific points
+                        from each image that I wanted to be 1 to 1 with each other and shifted, rotated, 
+                        and resized the images to make that happen. In my case, I chose to align the 
+                        eyes.
+                    </p>
+                </div>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1.065fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Low Pass Filtered</h4>
+                    <h4>High Pass Filtered</h4>
+                    <h4>Hybrid: Dude + Shrek</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.2/low_freq_dude.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/high_freq_shrek.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/DudeShrek.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        Low Pass Filter:
+                        <br>Size: 31 x 31
+                        <br>Cutoff Value: 5
+                    </p>
+                    <p style="text-align: center">
+                        High Pass Filter:
+                        <br>Size: 91 x 91
+                        <br>Cutoff Value: 15
+                    </p>
+                    <p style="text-align: center">
+                        Low Freq. Weight: 1.1
+                        <br>High Freq. Weight: 0.35
+                    </p>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Using Gaussian Filters, I can create a low pass filter that blurs an image, 
+                        leaving low frequencies, and a high pass filter that retains the higher frequencies only.
+                        Each filter has there own cut-off frequencies. The higher the cut-off frequencies, the more gets filtered out from either.
+                        The lower the cut-off frequencies, the more the finer details get retained. For all these
+                        examples, the cut-off frequencies were decided via trial and error to find the right balance
+                        of the insensity of each image. I wanted to ensure that neither images overpowered each other,
+                        making it difficult to gauge what could be seen. 
+                    </p>
+                </div>
+                <h4 class="sub-header">Log Magnitude of the Fourier Transformed:</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 2.09fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Input 1: Dude</h4>
+                    <h4>Input 2: Shrek</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.2/fft_input1.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/fft_input2.png" >
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Aligned Input 1</h4>
+                    <h4>Aligned Input 2</h4>
+                    <h4>Hybrid: Dude + Shrek</h4>          
+                    <div class="img_contain">
+                        <img src="./media/2.2/fft_aligned_input1.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/fft_aligned_input2.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.2/fft_hybrid.png" >
+                    </div>
+                </div>
+            </section>
+            <section>
+                <br>
+                <h3>Gaussian and Laplacian Stacks</h3>
+                <h4 class="sub-header">Recreated Outcomes of Gaussian & Laplacian Stacks Application to Oraple (std: 5, kernel size: 31, layers: 6)</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Apple Half</h4>
+                    <h4>Orange Half</h4>
+                    <h4>Blended Oraple</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.3/apple_mask1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/orange_mask1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/oraple1.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        (a) Layer 0
+                    </p>
+                    <p style="text-align: center">
+                        (b) Layer 0
+                    </p>
+                    <p style="text-align: center">
+                        (c) Layer 0
+                    </p>
+                    <div class="img_contain">
+                        <img src="./media/2.3/apple_mask2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/orange_mask2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/oraple2.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        (d) Layer 2
+                    </p>
+                    <p style="text-align: center">
+                        (e) Layer 2
+                    </p>
+                    <p style="text-align: center">
+                        (f) Layer 2
+                    </p>
+                    <div class="img_contain">
+                        <img src="./media/2.3/apple_mask3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/orange_mask3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/oraple3.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        (g) Layer 4
+                    </p>
+                    <p style="text-align: center">
+                        (h) Layer 4
+                    </p>
+                    <p style="text-align: center">
+                        (i) Layer 4
+                    </p>
+                    <div class="img_contain">
+                        <img src="./media/2.3/apple_mask4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/orange_mask4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.3/oraple4.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        (j)
+                    </p>
+                    <p style="text-align: center">
+                        (k)
+                    </p>
+                    <p style="text-align: center">
+                        (l)
+                    </p>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Multiresolution blending essentially divides the images into various frequencies and apply 
+                        progressive masks with boundaries that become softer down the frequency stack. They are then
+                        summed together to create the blended images.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <br>
+                <h3>Multiresolution Blending</h3>
+                <h4 class="sub-header">Custom Picks: The Pumpkimelon (std: 10, kernel size: 61, layers: 6)</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Watermelon</h4>
+                    <h4>Pumpkin</h4>
+                    <h4>Pumpkimelon</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.4/watermelon.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/pumpkin.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/pumpkimelon.jpg" >
+                    </div>
+                </div>
+
+                <h4 class="sub-header">Custom Picks: Moonion (std: 10, kernel size: 61, layers: 6)</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Minion</h4>
+                    <h4>Moon</h4>
+                    <h4>Moonion</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.4/minion.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moon.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moonion4.jpg" >
+                    </div>
+                </div>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.065fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Minion Circle</h4>
+                    <h4>Moon Ring</h4>
+                    <h4>Blended Moonion</h4>
+                    <div class="img_contain">
+                        <img src="./media/2.4/minion_mask1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moon_mask1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moonion1.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        Layer 0
+                    </p>
+                    <p style="text-align: center">
+                        Layer 0
+                    </p>
+                    <p style="text-align: center">
+                        Layer 0
+                    </p>
+                    
+                    <div class="img_contain">
+                        <img src="./media/2.4/minion_mask3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moon_mask3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moonion3.jpg" >
+                    </div>
+                    <p style="text-align: center">
+                        Layer 4
+                    </p>
+                    <p style="text-align: center">
+                        Layer 4
+                    </p>
+                    <p style="text-align: center">
+                        Layer 4
+                    </p>
+                    <div class="img_contain">
+                        <img src="./media/2.4/minion_mask4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moon_mask4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/2.4/moonion4.jpg" >
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+       
+    </main>
+</body>
+</html>
