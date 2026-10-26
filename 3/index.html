@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EricNguyen1213.github.io/3/</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;            
+        }
+        body {
+            background-image: url('https://img.magnific.com/free-photo/cream-canvas-textured-background-beige-minimal-design_53876-160754.jpg?semt=ais_hybrid&w=740&q=80');
+        }
+        header {
+            background-image: url("https://miro.medium.com/1*V8CHfxxu5sKt4abDiGY1-g.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            display: flex;
+        }
+        nav > a {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+            width: calc(100% * 1/7);
+            text-decoration: none;
+            text-align: center;
+        }
+        nav > a > h3 {
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: white;
+            font-size: 4rem;
+            text-align: left;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 66%;
+        }
+        main {
+            width: calc(100%);
+            margin: auto;
+            padding-block: 75px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            padding-bottom: 200px;
+        }
+        section {
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin-block: 0 20px;
+        }
+        h3 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            
+        }
+        .img_contain {
+            text-align: center;
+        }
+        .img_contain > img {
+            max-width: 100%;   
+            max-height: 100%;  
+            height: auto;       
+            width: auto;
+            object-fit: contain;
+
+        }
+        .img-grid > p, .img_contain > p {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            text-align: left; 
+            width: 80%;
+            margin: auto;
+        }
+        .img-grid > h4 {
+            text-align: center;
+            width: 100%;
+            margin-top: auto
+        }
+        .sub-header {
+            width: 99%; 
+            margin-inline: auto;
+            margin-bottom: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 3:<br>Fun with Flow Models</h1>
+    </header>
+    <nav>
+        <a href="../index.html" style="border-left: 0px">
+            <h3>Home</h3>
+        </a>
+        <a href="../0/index.html">
+            <h3>Project 0</h3>
+        </a>
+        <a href="../1/index.html">
+            <h3>Project 1</h3>
+        </a>
+        <a href="../2/index.html">
+            <h3>Project 2</h3>
+        </a>
+        <a href="../3/index.html">
+            <h3>Project 3</h3>
+        </a>
+        <a href="../4/index.html">
+            <h3>Project 4</h3>
+        </a>
+        <a href="../5/index.html">
+            <h3>Final Project</h3>
+        </a>
+    </nav>
+    <main>
+        <div style="width:calc(100% * 5/6); margin:auto">
+            <h2 style="font-size:3.75rem; margin:0">Part A: Exploring the Power of Flow Models</h2>
+        </div>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Visualizing Training & Sampling</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Constructing Noisy Training Inputs</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>t = 0.25</h4>
+                    <h4>t = 0.50</h4>
+                    <h4>t = 0.75</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.1_original.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.25_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_noisy_image.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        Sampled Gaussian noise is interpolated with a clean image. Image is scaled with t and noise is scaled with (1 - t) before addition.
+                    </p>
+                </div>            
+            </section>
+            <section>
+                <h3>Classical Denoising</h3>
+                <h4 class="sub-header">Gaussian Blur Comparison</h4>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px">
+                    <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                        <h4>Noisy: t = 0.25</h4>
+                        <h4>Gaussian Blur: σ = 8.0</h4>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.25_noisy_image.jpg" >
+                        </div>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.25_blur.jpg" >
+                        </div>
+                    </div>
+
+                    <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                        <h4>Noisy: t = 0.50</h4>
+                        <h4>Gaussian Blur: σ = 4.0</h4>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.5_noisy_image.jpg" >
+                        </div>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.5_blur.jpg" >
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="margin:auto; width:50%; display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Noisy: t = 0.75</h4>
+                    <h4>Gaussian Blur: σ = 2.0</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_blur.jpg" >
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Nearby pixels are averaged together, reducing the significance of individual noise but at the expense of image detail. Effectiveness of blur decreases as noise levels increase.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h3>One-Step Denoising</h3>
+                <h4 class="sub-header">Comparison</h4>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px">
+                    <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                        <h4>Noisy: t = 0.25</h4>
+                        <h4>One Step</h4>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.25_noisy_image.jpg" >
+                        </div>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.25_denoise.jpg" >
+                        </div>
+                    </div>
+
+                    <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                        <h4>Noisy: t = 0.50</h4>
+                        <h4>One Step</h4>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.5_noisy_image.jpg" >
+                        </div>
+                        <div class="img_contain">
+                            <img src="./media/a/1/0.5_denoise.jpg" >
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="margin:auto; width:50%; display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Noisy: t = 0.75</h4>
+                    <h4>One Step</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_denoise.jpg" >
+                    </div>
+                </div>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Using a pretrained flow model, we take a one-step denoising action by moving the noisy image in a predicted velocity.
+                    </p>
+                </div>
+            </section> 
+            <section>
+                <h3>Visualizing Velocity</h3>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Original</h4>
+                    <img style="width: 40%" src="./media/a/1/1.1_original.jpg" >
+                </div>
+                <h4 class="sub-header">Noisy: t = 0.25</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Noisy Image</h4>
+                    <h4>Predicted (1 - t)v&#770</h4>
+                    <h4>Ground Truth (1 - t)v<sub>gt</sub></h4>
+                    <h4>Error Map</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.25_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.25_predicted.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.25_groundtruth.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.25_errormap.jpg" >
+                    </div>
+                </div>
+                <br>
+                <h4 class="sub-header">Noisy: t = 0.5</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Noisy Image</h4>
+                    <h4>Predicted (1 - t)v&#770</h4>
+                    <h4>Ground Truth (1 - t)v<sub>gt</sub></h4>
+                    <h4>Error Map</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_predicted.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_groundtruth.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_errormap.jpg" >
+                    </div>
+                </div>
+                <br>
+                <h4 class="sub-header">Noisy: t = 0.75</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Noisy Image</h4>
+                    <h4>Predicted (1 - t)v&#770</h4>
+                    <h4>Ground Truth (1 - t)v<sub>gt</sub></h4>
+                    <h4>Error Map</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_noisy_image.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_predicted.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_groundtruth.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.75_errormap.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        Given the original image with varying levels of noise, we observe both the predicted velocity guiding the one-step denoising update
+                        and the ground truth update that brings the noisy image right to the original. We can see where these two updates differ most, the
+                        difference between the ideal ground truth update and the predicted update.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h3>Iterative Denoising with Euler Sampling</h3>
+                <h4 class="sub-header">Euler Updates</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>t = 0.50</h4>
+                    <h4>t = 0.60</h4>
+                    <h4>t = 0.70</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_euler.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.6_euler.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.7_euler.jpg" >
+                    </div>
+                    <h4>t = 0.80</h4>
+                    <h4>t = 0.90</h4>
+                    <h4>t = 1.00</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.8_euler.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.9_euler.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.0_euler.jpg" >
+                    </div>
+                </div>
+                <h4 class="sub-header">Denoising Methods</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Gaussian Blur</h4>
+                    <h4>One-Step Denoise</h4>
+                    <h4>Euler Denoise</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.1_original.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_blur.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/0.5_denoise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.0_euler.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        One-step denoising is not enough because from immense noise, the predicted velocity is the average of all possibilities. 
+                        Going incrementally allows the denosing step to move towards more specific predictions. The predicted velocity can change 
+                        along the path. To walk through the denoising incrementally, Euler integration is used to sample. When comparing the denoising methods,
+                        we could see the Gaussian blur be very less detailed the rest with grainy noise still visible. We could see the Euler denoising be more
+                        detailed than the One-step denoising.
+                    </p>
+                </div>            
+            </section>
+            <section>
+                <h3>Generating Images from Noise</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Seed 180</h4>
+                    <h4>Seed 181</h4>
+                    <h4>Seed 182</h4>
+                    <h4>Seed 183</h4>
+                    <h4>Seed 184</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/gen_from_noise0.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/gen_from_noise1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/gen_from_noise2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/gen_from_noise3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/gen_from_noise4.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        Denoising pure noise using the same methods as above does not exactly return great results.
+                    </p>
+                </div>            
+            </section>
+        </section>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Conditional Generation & Guidance</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Classifier-Free Guidance (CFG)</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Seed 180</h4>
+                    <h4>Seed 181</h4>
+                    <h4>Seed 182</h4>
+                    <h4>Seed 183</h4>
+                    <h4>Seed 184</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/2/cfg_gen_from_noise0.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/cfg_gen_from_noise1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/cfg_gen_from_noise2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/cfg_gen_from_noise3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/cfg_gen_from_noise4.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        To implement classifier-free guidance, we add to the velocity due to conditional prompt the scaled difference between that conditional velocity and velocity without a prompt. The goal 
+                        is to distance the predicted velocity from the predicted velocity of the average image the flow points to.
+                    </p>
+                </div>            
+            </section>
+        </section>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Creative Applications</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Image-to-Image Editing</h3>
+                <h4 class="sub-header">Campanile</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_campanile.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_campanile.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_campanile.jpg" >
+                    </div>
+                </div>
+                <br>
+
+                <h4 class="sub-header">Lush Green Forest</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_for.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_for.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_for.jpg" >
+                    </div>
+                </div>
+                <br>
+
+                <h4 class="sub-header">Rubber Ducky</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_ducky.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_ducky.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_ducky.jpg" >
+                    </div>
+                </div>
+
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        Essentially, the image has noise added to it and then it goes through the denoising process to
+                        allow the image be edited with hallucinated features. The more the noise level, the more the denoised
+                        image departs from the original.
+                    </p>
+                </div>
+                <br>
+                <br>
+                
+                <h4 class="sub-header">Web Image</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_web.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_web.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_web.jpg" >
+                    </div>
+                </div>
+                <br>
+
+                <h4 class="sub-header">Drawn Image 1</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_drawn1.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_drawn1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_drawn1.jpg" >
+                    </div>
+                </div>
+                <br>
+
+                <h4 class="sub-header">Drawn Image 2</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_drawn2.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_drawn2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_drawn2.jpg" >
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Text-Guided Image Editing</h3>
+                <h4 class="sub-header">Campanile, Prompt: "a photograph of a rocket on a launch pad"</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_campanile_prompt.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_campanile_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_campanile_prompt.jpg" >
+                    </div>
+                </div>
+
+                <br>
+                <h4 class="sub-header">Lush Green Forest, Prompt: "a photograph of a green tidal wave with a whale"</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_for_prompt.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_for_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_for_prompt.jpg" >
+                    </div>
+                </div>
+
+                <br>
+                <h4 class="sub-header">Rubber Ducky, Prompt: "a photograph of yellow ice cream in a cone with toppings"</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Starting Time t = 0.02</h4>
+                    <h4>Starting Time t = 0.04</h4>
+                    <h4>Starting Time t = 0.06</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/original_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.02_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.04_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.06_ducky_prompt.jpg" >
+                    </div>
+                    <h4>Starting Time t = 0.10</h4> 
+                    <h4>Starting Time t = 0.14</h4> 
+                    <h4>Starting Time t = 0.25</h4>
+                    <h4>Starting Time t = 0.50</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.10_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.14_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.25_ducky_prompt.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/0.50_ducky_prompt.jpg" >
+                    </div>
+                </div>
+
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        These are examples where the conditional prompt is more than just getting a high quality image. These prompts will lead the image
+                        generation in a direction towards other areas of acceptable outputs.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Visual Anagrams</h3>
+                <br>
+                <div class="img-grid" style="width:80%; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>a small island with a lighthouse in an ocean</h4>
+                    <h4>a hot air balloon flying in the cloudy sky</h4>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/va0_upright.jpg" >
+                    </div>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/va0_upsidedown.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="width:80%; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>a painting of a sunny tropical beach</h4>
+                    <h4>a painting of a campfire</h4>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/va1_upright.jpg" >
+                    </div>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/va1_upsidedown.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        To create a visual anagram, instead of simply using the classifer-free guidance velocity by itself, we take the average of two CFG velocities. One is from the upright version of the image, and the other is the upside-down version of the image. Each are conditioned on separate prompts.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Hybrid Images</h3>
+                <br>
+                <div class="img-grid" style="width:80%; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>a photo of flowers</h4>
+                    <h4>a photo of a peacock</h4>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/hybrid0.jpg" >
+                    </div>
+                    <div class="img_contain" style="height:100px">
+                        <img src="./media/a/3/hybrid0.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="width:80%; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>a watercolor of flowers</h4>
+                    <h4>a watercolor of a duck</h4>
+                    <div class="img_contain" style="height:400px">
+                        <img src="./media/a/3/hybrid1.jpg" >
+                    </div>
+                    <div class="img_contain" style="height:100px">
+                        <img src="./media/a/3/hybrid1.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text">
+                        To create a hybrid image, the predicted velocity used to steer the direction of denoising is the sum of the low pass frequencies of the CFG velocity of one prompt and the high pass frequencies of the CFG velocity of another prompt.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <div style="width:calc(100% * 5/6); margin:auto">
+            <h2 style="font-size:3.75rem; margin:0">Part B: Flow Matching from Scratch</h2>
+        </div>
+
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Training a Single-Step Denoising UNet</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Using a UNet to Train a Denoiser</h3>
+                <h4 class="sub-header">Noising Process over Various Levels σ</h4>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>σ = 0.0</h4>
+                    <h4>σ = 0.2</h4>
+                    <h4>σ = 0.4</h4>
+                    <h4>σ = 0.5</h4>
+                    <h4>σ = 0.6</h4>
+                    <h4>σ = 0.8</h4>
+                    <h4>σ = 1.0</h4>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.0_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.2_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.4_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.5_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.6_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/0.8_noise.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img style="width:300px" src="./media/b/1/1.0_noise.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        Sampled Gaussian noise is scaled and added into an image of a digit.
+                    </p>
+                </div>            
+            </section>
+            <section>
+                <h3>Training on Noisy Images of Level 0.5</h3>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Training Loss</h4>
+                    <img style="width: 60%" src="./media/b/1/training_loss.png" >
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising after Epoch 1</h4>
+                    <h4>Denoising after Epoch 5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/1/epoch0_0.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/1/epoch4_0.png" >
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Out-of-Distribution Testing</h3>
+                <br>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising Images of Noisy Level 0.0</h4>
+                    <h4>Denoising Images of Noisy Level 0.2</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise0.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise1.png" >
+                    </div>
+                    <h4>Denoising Images of Noisy Level 0.4</h4>
+                    <h4>Denoising Images of Noisy Level 0.5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise2.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise3.png" >
+                    </div>
+                    <h4>Denoising Images of Noisy Level 0.6</h4>
+                    <h4>Denoising Images of Noisy Level 0.8</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise4.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/1/test_on_noise5.png" >
+                    </div>
+                </div>
+                <div class="img_contain">
+                    <h4>Denoising Images of Noisy Level 1.0</h4>
+                    <img src="./media/b/1/test_on_noise6.png" >
+                </div>
+            </section>
+            <section>
+                <h3>Denoising Pure Noise</h3>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Training Loss</h4>
+                    <img style="width: 60%" src="./media/b/1/training_loss1.png" >
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising after Epoch 1</h4>
+                    <h4>Denoising after Epoch 5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/1/epoch0_1.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/1/epoch4_1.png" >
+                    </div>
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        For both epoch observations, we can observe that the image we get after the one-step denoise attempt looks fairly the same regardless of the 
+                        noise input. This is because when using a model that is trained to minimize the sum squared distance to all training examples, the model determines
+                        that the most optimal denosing step is one that reduces the distance equally to all, essentially making the denoising attempt reach the average of 
+                        all the digits it trains on. This is clear to see because the result we see for all the denoise attempts is the same amalgamation that looks like
+                        the average of all digits.
+                    </p>
+                </div> 
+            </section>
+        </section>
+
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Training a Flow Matching Model</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Training the Time-Conditioned UNet</h3>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Training Loss</h4>
+                    <img style="width: 60%" src="./media/b/2/training_loss.png" >
+                </div> 
+            </section>
+            <section>
+                <h3>Sampling from the Time-Conditioned UNet</h3>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising after Epoch 1</h4>
+                    <h4>Denoising after Epoch 5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch0_0.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch9_0.png" >
+                    </div>
+                </div>
+                <div class="img_contain">
+                    <h4>Denoising after Epoch 10</h4>
+                    <img src="./media/b/2/epoch9_0.png" >
+                </div>
+            </section>
+            <section>
+                <h3>Training the Class-Conditioned UNet</h3>
+                <div class="img_contain" style="margin:auto">
+                    <h4>Training Loss</h4>
+                    <img style="width: 60%" src="./media/b/2/training_loss1.png" >
+                </div> 
+            </section>
+            <section>
+                <h3>Sampling from the Class-Conditioned UNet</h3>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising after Epoch 1</h4>
+                    <h4>Denoising after Epoch 5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch0_1.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch9_1.png" >
+                    </div>
+                </div>
+                <div class="img_contain">
+                    <h4>Denoising after Epoch 10</h4>
+                    <img src="./media/b/2/epoch9_1.png" >
+                </div>
+                <h4 class="sub-header">After Replacing the Scheduler</h4>
+                <div class="img-grid" style="margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px">
+                    <h4>Denoising after Epoch 1</h4>
+                    <h4>Denoising after Epoch 5</h4>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch0_2.png" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/b/2/epoch9_2.png" >
+                    </div>
+                </div>
+                <div class="img_contain">
+                    <h4>Denoising after Epoch 10</h4>
+                    <img src="./media/b/2/epoch9_2.png" >
+                </div>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        To remove the scheduler, I simply replace its functionality with a change of optimizer, specifically AdamW.
+                    </p>
+                </div> 
+            </section>
+        </section>
+       
+    </main>
+</body>
+</html>
