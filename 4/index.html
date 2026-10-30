@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EricNguyen1213.github.io/4/</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;            
+        }
+        body {
+            background-image: url('https://img.magnific.com/premium-photo/white-watercolor-paper-texture-background_561246-308.jpg?semt=ais_hybrid&w=740&q=80');
+        }
+        header {
+            background-image: url("https://www.lonelyspeck.com/wp-content/uploads/2014/09/panorama-stitch-overlap-1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-blend-mode: multiply;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            display: flex;
+        }
+        nav > a {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            border-left: 1px black solid;
+            border-bottom: 1px black solid;
+            width: calc(100% * 1/7);
+            text-decoration: none;
+            text-align: center;
+        }
+        nav > a > h3 {
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: white;
+            font-size: 4rem;
+            text-align: left;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 66%;
+        }
+        main {
+            width: calc(100%);
+            margin: auto;
+            padding-block: 75px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            padding-bottom: 200px;
+        }
+        section {
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin-block: 0 20px;
+        }
+        h3 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-family: "Lato", sans-serif;
+            font-style: normal;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            
+        }
+        .img_contain {
+            text-align: center;
+        }
+        .img_contain > img {
+            max-width: 100%;   
+            max-height: 100%;  
+            height: auto;       
+            width: auto;
+            object-fit: contain;
+
+        }
+        .img-grid > p, .img_contain > p {
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            text-align: left; 
+            width: 80%;
+            margin: auto;
+        }
+        .img-grid > h4 {
+            text-align: center;
+            width: 100%;
+            margin-top: auto
+        }
+        .sub-header {
+            width: 99%; 
+            margin-inline: auto;
+            margin-bottom: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 4:<br>(Auto)stitching and Photo Mosaics</h1>
+    </header>
+    <nav>
+        <a href="../index.html" style="border-left: 0px">
+            <h3>Home</h3>
+        </a>
+        <a href="../0/index.html">
+            <h3>Project 0</h3>
+        </a>
+        <a href="../1/index.html">
+            <h3>Project 1</h3>
+        </a>
+        <a href="../2/index.html">
+            <h3>Project 2</h3>
+        </a>
+        <a href="../3/index.html">
+            <h3>Project 3</h3>
+        </a>
+        <a href="../4/index.html">
+            <h3>Project 4</h3>
+        </a>
+        <a href="../5/index.html">
+            <h3>Final Project</h3>
+        </a>
+    </nav>
+    <main>
+        <div style="width:calc(100% * 5/6); margin:auto">
+            <h2 style="font-size:3.75rem; margin:0">Part A: Image Warping and Mosaicing</h2>
+        </div>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Shoot the Pictures</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Set 1: Lecture Hall</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>1.1</h4>
+                    <h4>1.2</h4>
+                    <h4>1.3</h4>
+                    <h4>1.4</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.4.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="width:75%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>1.5</h4>
+                    <h4>1.6</h4>
+                    <h4>1.7</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.5.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.6.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/1.7.jpg" >
+                    </div>
+                </div>
+                <br>           
+            </section>
+            <section>
+                <h3>Set 2: Nature</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>2.1</h4>
+                    <h4>2.2</h4>
+                    <h4>2.3</h4>
+                    <h4>2.4</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.4.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="width:75%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>1.5</h4>
+                    <h4>1.6</h4>
+                    <h4>1.7</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.5.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.6.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/2.7.jpg" >
+                    </div>
+                </div>
+                <br>           
+            </section>
+            <section>
+                <h3>Set 3: Stairway</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>3.1</h4>
+                    <h4>3.2</h4>
+                    <h4>3.3</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.2.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.3.jpg" >
+                    </div>
+                </div>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>3.4</h4>
+                    <h4>3.5</h4>
+                    <h4>3.6</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.5.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/1/3.6.jpg" >
+                    </div>
+                </div>
+                <br>           
+            </section>
+            <br>
+            <div style="width: 95%; margin: auto;">
+                <p class="text" style="margin: 0">
+                    These are pictures I took. They are taken from one position and rotated to get multiple shots from the same camera point.
+                </p>
+            </div>  
+        </section>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Recover Homographies</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        To warp the images to be able align, I needed to be able to approximate the transformation between the points in the image. That is doable via calculating the 
+                        homography matrix. The homography matrix has 8 unknowns, but this is solvable using at least 4 points of correspondences. For stability, it is better to use more
+                        than 4 points for overdetermination. The approximation could be done with Least Squares.
+                    </p>
+                </div>  
+                <br>
+                <h3>System of Equations</h3>
+                <br>
+                <div class="img-grid" style="width:80%; margin:auto; display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <div class="img_contain" style="margin:auto">
+                        <img src="./media/a/2/2.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.2.jpg" >
+                    </div>
+                </div>
+                <div class="img-grid" style="width:80%; margin:auto; display:grid; grid-template-columns:minmax(0, 1fr); gap: 5px">
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.3.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.4.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.5.jpg" >
+                    </div>
+                </div>
+                <br>
+                <h3>Correspondence Visualizations</h3>
+                <br>
+                <div class="img-grid" style="display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); column-gap:20px">
+                    <h4>Lecture Hall 1.1 => 1.2</h4>
+                    <h4>Lecture Hall 2.1 => 2.2</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.1correspondence.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.2correspondence.jpg" >
+                    </div>
+                    <h4></h4>
+                    <h4></h4>
+                    <h4>Recovered H Matrix:</h4>
+                    <h4>Recovered H Matrix:</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.1correspondenceeq.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/2/2.2correspondenceeq.jpg" >
+                    </div>
+                </div>        
+            </section>
+        </section>
+        
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Warp the Images</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <br>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        To successfully conduct a warp on an image to align with another, here is what I did. First, I computed corresponding H matrix.
+                        Using that matrix, I transformed the 4 corners of the image and recorded the min and max of both the X and Y dimensions in order 
+                        to determine the bound box. I also used them to create a translation matrix to ensure that when I conduct the transformation, the 
+                        points would be transformed to valid nonnegtive points on the output bound box. I inverted the transformation such that I could go
+                        from the output box to the input box such that I could ensure every pixel in the output box is accounted for. Using this inverse
+                        transformation, I applied two different method of sampling. One was Nearest Neighbor where the transformed result is rounded to the 
+                        nearest input pixel, and I would just sample the values from there. The other was Bilinear Interpolation where I would use the transformed 
+                        result to calculated a weighted combination of the values from all adjacent pixels: top-left, top-right, bottom-left, and bottom-right. 
+                    </p>
+                </div>
+
+                <h3>Rectification Results</h3>
+                <h4 class="sub-header">Wall of Paintings 1</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Nearest Neighbor</h4>
+                    <h4>Bilinear Interpolation</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.1.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.1.2.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 4.57 s
+                        </p>
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.1.3.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 13.9 s
+                        </p>
+                    </div>
+                </div>
+                <h4 class="sub-header">Wall of Paintings 2</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Nearest Neighbor</h4>
+                    <h4>Bilinear Interpolation</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.2.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.2.2.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 147 ms
+                        </p>
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.2.3.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 399 ms
+                        </p>
+                    </div>
+                </div>
+                <h4 class="sub-header">Rug</h4>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 5px">
+                    <h4>Original</h4>
+                    <h4>Nearest Neighbor</h4>
+                    <h4>Bilinear Interpolation</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.3.1.jpg" >
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.3.2.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 290 ms
+                        </p>
+                    </div>
+                    <div class="img_contain">
+                        <img src="./media/a/3/3.3.3.jpg" >
+                        <p style="text-align:center;">
+                            Run Time: 478 ms
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <h3>Comparison</h3>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        In terms of quality, in high resolutions, the results of either methods of samplings are just about the same in view with barely noticeable differences if at all. 
+                        In lower resolutions, bilinear interpolation is better, resulting in quality with pixels that is weighted on its surrounding instead of solidly choosing one pixel value
+                        like with nearest neighbor. The tradeoff is that bilinear interpolation is twice as expensive as nearest neighbor in time. In the tests run above, the run time for 
+                        bilinear interpolation has always resulted in run time is very near to twice that of nearest neighbor.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <section style="width:calc(100% * 4/5); margin:auto;">
+            <h2>Blend the Images into a Mosaic</h2>
+            <hr style="background-color: black; height: 2px;">
+            <section>
+                <h3>Procedure</h3>
+                <div style="width: 95%; margin: auto;">
+                    <p class="text" style="margin: 0">
+                        Due to the sheer size of my inputs and the number of them, I have to unroll each image into a cylindrical projection to prevent the bound boxes from
+                        blowing up towards the end. With that, I also converted the cartesian correspondences into their cylindrical version to be compatible for this implementation.
+                        Next, I computed all the H Matrices for a set of images. Choosing 1 middle image to be the anchor, I proceeded calculate the H matrices spanning outward from 
+                        the anchor, which means it is the images to the left and the images to the right of the anchor that have to project towards the anchor. As I calculate the
+                        H matrices for images that were farther away, I matrix-multiplied previous H matrices onto those current ones to account for the image transforming towards images were
+                        also transforming. It was like a chain. After getting all the H matrices, I proceeded to transform the four corners of every image in the set with their corresponding H 
+                        matrix to obtain the definitive minimum and maximum of the X and Y dimensions to create the final bound box every transformed image is going to be pasted on as well as to 
+                        gather metadata such that I can properly translate the warped images to the right spot on the final bound box. I then proceeded to generate the warped image using the Part 3's
+                        function but with the corresponding H matrix I created by cascading H matrices. I used the local minimum and maximum dimensions of their bound boxes in conjuction with the 
+                        definitive minimum and maximum to find the right x and y translation for the warped images onto the final bound box. Before combining the warped images all together, I calculated
+                        a weighting system per layer which involves reducing the weights of pixels as they near the edge of the warped image. This is because the overlap will happen around the edges. 
+                        This is all normalized in the end to keep values balanced and valid. After combining all layers, a panaoramic view would be returned.
+                    </p>
+                </div>
+
+                <h3>Full Blended Image Mosaics</h3>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr); gap: 5px">
+                    <h4 class="sub-header">Panorama of a Lecture Hall</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/4/4.1.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr); gap: 5px">
+                    <h4 class="sub-header">Panorama of Nature</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/4/4.2.jpg" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="img-grid" style="width:80%; margin:auto; display: grid; grid-template-columns:minmax(0, 1fr); gap: 5px">
+                    <h4 class="sub-header">Panorama of a Stairway</h4>
+                    <div class="img_contain">
+                        <img src="./media/a/4/4.3.jpg" >
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
